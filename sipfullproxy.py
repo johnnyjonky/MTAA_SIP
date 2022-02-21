@@ -207,6 +207,17 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 break
         data.append("")
         # text = string.join(data, "\r\n")
+        # CAST KDE MENIM SPRAVY!!!
+        if (data[0] == 'SIP/2.0 100 Trying'):
+            data[0] = 'SIP/2.0 100 Skusam'
+        elif (data[0] == 'SIP/2.0 180 Ringing'):
+            data[0] = 'SIP/2.0 180 Zvoniiiiim'
+        elif (data[0] == 'SIP/2.0 603 Decline'):
+            data[0] = 'SIP/2.0 603 NedvihaNikto'
+        elif (data[0] == 'SIP/2.0 200 Ok'):
+            data[0] = 'SIP/2.0 200 VIBAVENE OK'
+        elif (data[0] == 'SIP/2.0 487 Request terminated'):
+            data[0] = 'SIP/2.0 487 STERMINOVANE OK'
         text = "\r\n".join(data).encode("utf-8")
         self.socket.sendto(text, self.client_address)
         showtime()
@@ -260,7 +271,7 @@ class UDPHandler(socketserver.BaseRequestHandler):
             # if registrar.has_key(fromm):
             if fromm in registrar:
                 del registrar[fromm]
-                self.sendResponse("200 0K")
+                self.sendResponse("200 VIBAVENE 0K")
                 return
         else:
             now = int(time.time())
@@ -294,6 +305,17 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 # insert Record-Route
                 data.insert(1, recordroute)
                 # text = string.join(data, "\r\n")
+                # CAST KDE MENIM SPRAVY!!!
+                if (data[0] == 'SIP/2.0 100 Trying'):
+                    data[0] = 'SIP/2.0 100 Skusam'
+                elif (data[0] == 'SIP/2.0 180 Ringing'):
+                    data[0] = 'SIP/2.0 180 Zvoniiiiim'
+                elif (data[0] == 'SIP/2.0 603 Decline'):
+                    data[0] = 'SIP/2.0 603 NedvihaNikto'
+                elif (data[0] == 'SIP/2.0 200 Ok'):
+                    data[0] = 'SIP/2.0 200 VIBAVENE OK'
+                elif (data[0] == 'SIP/2.0 487 Request terminated'):
+                    data[0] = 'SIP/2.0 487 STERMINOVANE OK'
                 text = "\r\n".join(data).encode("utf-8")
                 socket.sendto(text, claddr)
                 showtime()
@@ -320,6 +342,17 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 # insert Record-Route
                 data.insert(1, recordroute)
                 # text = string.join(data, "\r\n")
+                # CAST KDE MENIM SPRAVY!!!
+                if (data[0] == 'SIP/2.0 100 Trying'):
+                    data[0] = 'SIP/2.0 100 Skusam'
+                elif (data[0] == 'SIP/2.0 180 Ringing'):
+                    data[0] = 'SIP/2.0 180 Zvoniiiiim'
+                elif (data[0] == 'SIP/2.0 603 Decline'):
+                    data[0] = 'SIP/2.0 603 NedvihaNikto'
+                elif (data[0] == 'SIP/2.0 200 Ok'):
+                    data[0] = 'SIP/2.0 200 VIBAVENE OK'
+                elif (data[0] == 'SIP/2.0 487 Request terminated'):
+                    data[0] = 'SIP/2.0 487 STERMINOVANE OK'
                 text = "\r\n".join(data).encode("utf-8")
                 socket.sendto(text, claddr)
                 showtime()
@@ -347,6 +380,17 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 # insert Record-Route
                 data.insert(1, recordroute)
                 #text = string.join(data, "\r\n")
+                # CAST KDE MENIM SPRAVY!!!
+                if (data[0] == 'SIP/2.0 100 Trying'):
+                    data[0] = 'SIP/2.0 100 Skusam'
+                elif (data[0] == 'SIP/2.0 180 Ringing'):
+                    data[0] = 'SIP/2.0 180 Zvoniiiiim'
+                elif (data[0] == 'SIP/2.0 603 Decline'):
+                    data[0] = 'SIP/2.0 603 NedvihaNikto'
+                elif (data[0] == 'SIP/2.0 200 Ok'):
+                    data[0] = 'SIP/2.0 200 VIBAVENE OK'
+                elif (data[0] == 'SIP/2.0 487 Request terminated'):
+                    data[0] = 'SIP/2.0 487 STERMINOVANE OK'
                 text = "\r\n".join(data).encode("utf-8")
                 socket.sendto(text, claddr)
                 showtime()
@@ -367,6 +411,17 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 self.data = self.removeRouteHeader()
                 data = self.removeTopVia()
                 # text = string.join(data, "\r\n")
+                # CAST KDE MENIM SPRAVY!!!
+                if (data[0] == 'SIP/2.0 100 Trying'):
+                    data[0] = 'SIP/2.0 100 Skusam'
+                elif (data[0] == 'SIP/2.0 180 Ringing'):
+                    data[0] = 'SIP/2.0 180 Zvoniiiiim'
+                elif (data[0] == 'SIP/2.0 603 Decline'):
+                    data[0] = 'SIP/2.0 603 NedvihaNikto'
+                elif (data[0] == 'SIP/2.0 200 Ok'):
+                    data[0] = 'SIP/2.0 200 VIBAVENE OK'
+                elif (data[0] == 'SIP/2.0 487 Request terminated'):
+                    data[0] = 'SIP/2.0 487 STERMINOVANE OK'
                 text = "\r\n".join(data).encode("utf-8")
                 socket.sendto(text, claddr)
                 showtime()
@@ -419,6 +474,17 @@ class UDPHandler(socketserver.BaseRequestHandler):
         request_uri = self.data[0]
         if rx_request_uri.search(request_uri) or rx_code.search(request_uri):
             showtime()
+            # CAST KDE MENIM SPRAVY!!!
+            if (request_uri == 'SIP/2.0 100 Trying'):
+                request_uri = 'SIP/2.0 100 Skusam'
+            elif (request_uri == 'SIP/2.0 180 Ringing'):
+                request_uri = 'SIP/2.0 180 Zvoniiiiim'
+            elif (request_uri == 'SIP/2.0 603 Decline'):
+                request_uri = 'SIP/2.0 603 NedvihaNikto'
+            elif (request_uri == 'SIP/2.0 200 Ok'):
+                request_uri = 'SIP/2.0 200 VIBAVENE OK'
+            elif (request_uri == 'SIP/2.0 487 Request terminated'):
+                request_uri = 'SIP/2.0 487 STERMINOVANE OK'
             logging.info(">>> %s" % request_uri)
             logging.debug("---\n>> server received [%d]:\n%s\n---" % (len(data), data))
             logging.debug("Received from %s:%d" % self.client_address)

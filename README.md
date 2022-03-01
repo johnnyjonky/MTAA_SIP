@@ -1,11 +1,11 @@
 # MTAA_SIP JÁN HERCEG 102940
 ## ZADANIE
 Na vašom počítači (alebo virtuálnom počítači) sprevádzkujte SIP Proxy, ktorá umožní prepájanie a realizáciu hovorov medzi štandardnými SIP klientami. Na implementáciu vašej SIP Proxy si môžete zvoliť akýkoľvek programovací jazyk a použiť akúkoľvek SIP knižnicu, ktorá pre daný programovací jazyk existuje. Vo výsledku však musíte spúšťať “váš kód”, v ktorom sú zakomponované knižnice, ktoré poskytujú funkcionalitu SIP Proxy. To znamená, že nemôžete zobrať existujúcu SIP Proxy ako napr. Asterisk, kde len skompilujete alebo priamo spustíte cudziu binárku… Hovor musí byť realizovaný medzi dvomi fyzickými zariadeniami v rámci LAN siete.
-##Jazyk:
+## Jazyk:
 Python
-##GitHub s vypracovaným zadaním a PCAP súbormi:
+## GitHub s vypracovaným zadaním a PCAP súbormi:
 https://github.com/johnnyjonky/MTAA_SIP
-##Implementácia: 
+## Implementácia: 
 Prebral som “funkčnú knižnicu” sipfullproxy.py (https://github.com/tirfil/PySipFullProxy), ktorú som importol do môjho main.py, pomocou ktorého následne spúšťam SIP proxy server
 Premenné, ktoré sú potrebné pre správne fungovanie sipfullproxy sú čítané a menené v maine pomocou ‘sipfullproxy.premenná’ – inak sa hodnoty premenných nemenili správnym spôsobom – menili sa iba v main.py
 Socket server už však beží v main.py, takže nie je použité sipfullproxy.server (čo taktiež funguje, ale server chceme mať spustený pomocou main.py)

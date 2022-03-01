@@ -1,4 +1,4 @@
-import sipfullproxy
+import sipfullproxy # tento import - Copyright 2014 Philippe THIRION - https://github.com/tirfil/PySipFullProxy
 import logging
 import socket
 import socketserver

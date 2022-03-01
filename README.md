@@ -24,13 +24,13 @@ Okrem tohto sa funkcionalita sipfullproxy.py nijako nemenila.
 -	Presmerovanie hovoru na iného účastníka
 -	Možnosť realizovať videohovor
 -	Úprava SIP stavových kódov z zdrojovom kóde proxy, napr. “486 Busy Here” zmeníte na “486 Obsadené”
---	 Zoznam zmenených stavových kódov:
----	200 OK -> 200 VIBAVENE OK
----	100 Trying -> 100 Skusam
----	180 Ringing -> 180 Zvoniiiiim
----	487 Request terminated -> 487 STERMINOVANE OK
----	480 Temporarily unavailable -> 480 NEPISTE MI KET – Temporarily unavailable
----	500 Server Internal Error -> 500 CERKA PLACE AKO DAST LEBO Server Internal Error
----	400 Bad request -> 400 DOSTE VI (Bad request)
+  - Zoznam zmenených stavových kódov:
+    - 200 OK -> 200 VIBAVENE OK
+    -	100 Trying -> 100 Skusam
+    -	180 Ringing -> 180 Zvoniiiiim
+    -	487 Request terminated -> 487 STERMINOVANE OK
+    -	480 Temporarily unavailable -> 480 NEPISTE MI KET – Temporarily unavailable
+    -	500 Server Internal Error -> 500 CERKA PLACE AKO DAST LEBO Server Internal Error
+    -	400 Bad request -> 400 DOSTE VI (Bad request)
 ## PCAP súbory:
 Nachádzajú sa na githube pre všetky splnené požiadavky/funkcionality, s výnimkou zmenených SIP stavových kódov, nakoľko kódy sú viditeľné u už existujúcich pcap súborov.
